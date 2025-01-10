@@ -132,6 +132,16 @@ const config = {
         darkTheme: prismThemes.oneDark,
       },
     }),
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Raleway&family=Inconsolata',
+      },
+    },
+  ],
 };
 
 export default config;

@@ -91,11 +91,6 @@ const config = {
             label: 'Linux',
             position: 'left',
           },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       prism: {

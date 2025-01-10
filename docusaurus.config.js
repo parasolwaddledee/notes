@@ -70,6 +70,18 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'windows',
+        path: 'windows',
+        routeBasePath: 'windows',
+        sidebarPath: './sidebarsWindows.js',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,6 +94,11 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            to: '/windows',
+            label: 'Windows',
+            position: 'left',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',

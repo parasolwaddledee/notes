@@ -80,6 +80,15 @@ const config = {
         sidebarPath: './sidebarsWindows.js',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'linux',
+        path: 'linux',
+        routeBasePath: 'linux',
+        sidebarPath: './sidebarsLinux.js',
+      },
+    ],
   ],
 
   themeConfig:
@@ -97,6 +106,11 @@ const config = {
           {
             to: '/windows',
             label: 'Windows',
+            position: 'left',
+          },
+          {
+            to: '/linux',
+            label: 'Linux',
             position: 'left',
           },
           {

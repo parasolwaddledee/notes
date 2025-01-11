@@ -96,6 +96,9 @@ const config = {
       prism: {
         theme: prismThemes.oneLight,
         darkTheme: prismThemes.oneDark,
+        additionalLanguages: [
+          'powershell',
+        ],
       },
     }),
 

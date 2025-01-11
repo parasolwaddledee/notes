@@ -18,13 +18,10 @@ This step is only required for the evaluation edition of Windows Server.
 :::
 
 1. Display Windows editions that the current installation can be upgraded to:
-
     ```
     Dism.exe /Online /Get-TargetEditions
     ```
-
 2. Upgrade to the target edition and restart the computer:
-
     ```
     Dism.exe /Online /Set-Edition:<Windows Edition> /ProductKey:<Product Key> /AcceptEula
     ```
@@ -32,25 +29,18 @@ This step is only required for the evaluation edition of Windows Server.
 ## Activate Windows
 
 1. Install the product key:
-
     ```
     slmgr.vbs /ipk <Product Key>
     ```
-
 2. Specify the KMS server (default port: TCP 1688):
-
     ```
     slmgr.vbs /skms <KMS Server>:<Port>
     ```
-
 3. Activate Windows:
-
     ```
     slmgr.vbs /ato
     ```
-
 4. Verify the license information:
-
     ```
     slmgr.vbs /dlv
     ```

@@ -25,6 +25,13 @@ const sidebars = {
         'general/activating-windows',
       ],
     },
+    {
+      type: 'category',
+      label: 'Hyper-V',
+      items: [
+        'hyper-v/setting-up-windows-server-as-a-router',
+      ],
+    },
   ],
 
   // But you can create a sidebar manually

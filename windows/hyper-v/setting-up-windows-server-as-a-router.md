@@ -73,31 +73,31 @@ EXT <--> EVS <--> Internet(Internet)
 ## Configure Network Adapters
 
 1. Attach virtual switches `EVS`, `IVS01`, and `IVS02` to the virtual machine `ROUTER`.
-2. Rename network adapters to `EXT`, `INT01`, and `INT02` accordingly.
+2. Rename network adapters on `ROUTER` to `EXT`, `INT01`, and `INT02` accordingly.
 3. Set static IP address, default gateway, and DNS server on `EXT` for Internet access.
 4. Set static IP address on `INT01` and `INT02`; default gateway and DNS server are not required.
 
 ## Enable Routing and NAT
 
-1. Install the Windows feature on the virtual machine `ROUTER`:
+1. Install Windows feature on the virtual machine `ROUTER`:
     ```powershell
     Install-WindowsFeature -Name 'Routing' -IncludeManagementTools
     ```
 2. Open **Routing and Remote Access**.
-3. Right-click the server `ROUTER (local)` and select **Configure and Enable Routing and Remote Access**.
+3. Right-click on the server `ROUTER (local)` and select **Configure and Enable Routing and Remote Access**.
 4. Follow the wizard to enable routing and NAT:
     - Select **Network address translation (NAT)**.
     - Select `EXT` as the public interface to connect to the Internet.
     - Select `INT01` as the interface for the network that will have access to the Internet.
     - Select **I will set up name and address services later**.
-5. Navigate to `ROUTER (local)` > **IPv4** > **NAT**, right-click and select **New Interface**.
+5. Go to `ROUTER (local)` > **IPv4** > **NAT**, right-click and select **New Interface**.
 6. Select `INT02` as the private interface connected to the private network.
 
 ## Verification
 
-1. Attach virtual switch `IVS01` to the virtual machine `WKS01`.
+1. Attach internal virtual switch `IVS01` to the virtual machine `WKS01`.
 2. Configure network adapter on `WKS01` with a static IP address and set default gateway to the IP address of `INT01`.
-3. Attach virtual switch `IVS02` to the virtual machine `WKS02`.
+3. Attach internal virtual switch `IVS02` to the virtual machine `WKS02`.
 4. Configure network adapter on `WKS02` with a static IP address and set default gateway to the IP address of `INT02`.
 5. Verify that `WKS01` and `WKS02` can access the Internet through `ROUTER`.
-6. Test connectivity between `WKS01` and `WKS02` to ensure internal network communication is functioning properly.
+6. Test connectivity between `WKS01` and `WKS02` to ensure internal network communication is working properly.

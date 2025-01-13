@@ -91,6 +91,8 @@ EXT <--> EVS <--> Internet(Internet)
 
 ## Verification
 
-1. Attach virtual switch `IVS01` to virtual machine `WKS01` and configure the network adapter.
-2. Attach virtual switch `IVS02` to virtual machine `WKS02` and configure the network adapter.
-3. Test connectivity between the two virtual machines and verify the internet access.
+1. Attach the virtual switch `IVS01` to the virtual machine `WKS01`.
+2. Set static IP address on the network adapter and point default gateway to the IP address of `INT01`.
+3. Attach the virtual switch `IVS02` to the virtual machine `WKS02`.
+4. Set static IP address on the network adapter and point default gateway to the IP address of `INT02`.
+5. Test connectivity between the two virtual machines and verify internet access.

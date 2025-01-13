@@ -64,14 +64,14 @@ EXT <--> EVS <--> Internet(Internet)
 1. Create an external virtual switch `EVS` on the Hyper-V host.
 2. Create two internal virtual switches `IVS01` and `IVS02` on the Hyper-V host.
 3. Create a Windows Server virtual machine `ROUTER` to act as the router.
-4. Create two Windows virtual machines `WKS01` and `WKS02` as clients for the two data centers.
+4. Create two Windows virtual machines `WKS01` and `WKS02` to act as clients for the two data centers.
 
 ## Configure Network Adapters
 
 1. Attach virtual switches `EVS`, `IVS01`, and `IVS02` to the virtual machine `ROUTER`.
 2. Rename network adapters to `EXT`, `INT01`, and `INT02` accordingly.
 3. Set static IP address, default gateway, and DNS server on `EXT` for internet access.
-4. Set static IP addresses on `INT01` and `INT02`, default gateway and DNS server are not required.
+4. Set static IP address on `INT01` and `INT02`; default gateway and DNS server are not required.
 
 ## Enable Routing and NAT
 
@@ -87,10 +87,10 @@ EXT <--> EVS <--> Internet(Internet)
     - Select `INT01` as the interface for the network that will have access to the internet.
     - Select **I will set up name and address services later**.
 5. Navigate to the server `ROUTER (local)` > **IPv4** > **NAT**, right-click and select **New Interface**.
-6. Select `INT02` as the private interface connected to private network.
+6. Select `INT02` as the private interface connected to the private network.
 
 ## Verification
 
 1. Attach virtual switch `IVS01` to virtual machine `WKS01` and configure the network adapter.
 2. Attach virtual switch `IVS02` to virtual machine `WKS02` and configure the network adapter.
-3. Test connectivity between two virtual machines and verify internet access.
+3. Test connectivity between the two virtual machines and verify the internet access.

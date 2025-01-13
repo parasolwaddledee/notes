@@ -1,6 +1,6 @@
 # Setting Up Windows Server as a Router
 
-To simulate communication between two data centers on Hyper-V, set up a Windows Server to route traffic between two internal virtual networks. Additionally, enable NAT to allow internal networks to connect to the internet through external virtual network.
+To simulate communication between two data centers on Hyper-V, set up a Windows Server to route traffic between two internal virtual networks. Additionally, enable NAT to allow internal virtual networks to connect to the internet.
 
 ```mermaid
 flowchart LR
@@ -63,8 +63,8 @@ EXT <--> EVS <--> Internet(Internet)
 
 1. Create an external virtual switch `EVS` on the Hyper-V host.
 2. Create two internal virtual switches `IVS01` and `IVS02` on the Hyper-V host.
-3. Create a Windows Server virtual machine `ROUTER` to act as the router.
-4. Create two Windows virtual machines `WKS01` and `WKS02` to act as clients for the two data centers.
+3. Create a Windows Server virtual machine `ROUTER` as the router.
+4. Create two Windows virtual machines `WKS01` and `WKS02` as clients for the two data centers.
 
 ## Configure Network Adapters
 
